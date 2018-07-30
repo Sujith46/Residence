@@ -1,0 +1,114 @@
+
+<html>
+
+   <head>
+   <title>search</title>
+
+       <style>
+           body{
+                background:#96858F;
+                }
+
+           .wrap{
+                width:350px;
+                margin:auto;
+                background:#9099A2;
+                margin-top:50px;
+                padding:5px;
+                border-radius: 10px;
+                }
+
+            form{
+                 padding:10px;
+                 font family:arial;
+                 border:3px groove;
+                 margin:10px;
+                 }
+
+
+
+              input{
+                   padding:10px;
+                   margin:5px;
+                   border-radius:5px;
+                   border:none;
+                   }
+
+             input[type=text],input[type=text],input[type=text]{
+                   width:90%;
+                   }
+
+              h1{
+                background-color: #d5d5d5;
+                padding: 5px;
+                border-radius: 10px;
+              }
+
+              input[type=submit]
+              {
+                padding:20px;
+                padding-left: 100px;
+                padding-right: 100px;
+              }
+
+
+
+
+           </style>
+
+   </head>
+
+
+      <body>
+	<div class="wrap">
+
+          <form name="srch">
+              <center> <h1> SEARCH </h1></center>
+
+
+  <p><b>SEARCH BY:</b></p>
+      <input type="checkbox" name="name">Name
+      <input type="checkbox" name="phone">Phone
+      <input type="checkbox" name="fam">Familyname
+
+
+
+              </br>
+            </br>
+          </br>
+        </br>
+        <div id="fam">
+               NAME:<input type="text" name="yourname">
+               </br>
+               </br>
+
+               </div>
+               <script>
+
+               function famfunc(){
+
+                 var fa = document.getElementById("fam")
+                 if(fa.style.display == "none")
+                 {
+                   fa.style.dsiplay == "none"
+                 }
+               }
+               </script>
+
+
+               FAMILY NAME:<input type="text" name="familyname">
+               </br>
+               </br>
+
+
+	       PHONE NO:<input type="text" name="phoneno">
+               </br>
+               </br>
+
+              <center><input type="submit" name="submit" value="SUBMIT"></center>
+        </form>
+
+</div>
+
+      </body>
+</html>

@@ -1,0 +1,156 @@
+<html>
+
+   <head>
+   <title>registration</title>
+
+       <style>
+           body{
+                background:#9099A2;
+                }
+
+           .wrap{
+                width:350px;
+                margin:auto;
+                background:#96858F;
+                margin-top:50px;
+                padding:5px;
+                }
+
+            form{
+                 padding:10px;
+                 font family:arial;
+                 border:4px groove ;
+                 margin:10px;
+                 }
+
+               h2{
+                  text-align:center;
+                  background:#d5d5d5;
+                  color:black;
+                  padding:10px;
+                  border-radius:10px;
+                 }
+
+              input{
+                   padding:15px;
+                   margin:5px;
+                   border-radius:5px;
+                   border:none;
+                   }
+
+             input[type=text],input[type=text],input[type=email],input[type=text]{
+                   width:90%;
+                   }
+
+             input[type=button]{
+                   width:95%;
+                   background:#6D7993;
+                   cursor:pointer;
+                   font-size:18px;
+                   font-weight:bold;
+                   color:white;
+                   }
+
+            input[type=submit]:hover{
+                   background:yellow;
+                   }
+
+           </style>
+
+   </head>
+
+
+      <body>
+	<div class="wrap">
+
+          <form name="reg" method="post" >
+               <h2>MEMBERSHIP</h2>
+
+               <input type="text" name="yourname" placeholder="Your name" maxlength="20" autofocus>
+               </br>
+               </br>
+
+
+               <input type="text" name="familyname" placeholder="Family name" maxlength="30">
+               </br>
+               </br>
+
+               <input type="email" name="email" placeholder="Email">
+               </br>
+               </br>
+
+	       <input type="text" name="phoneno" placeholder="Phone No" maxlength="11">
+               <span id="numloc"></span>
+               </br>
+               </br>
+
+               <input type="button" value="Submit" onClick="return validate();" >
+
+
+              </form>
+
+       <script>
+              function validate()
+
+		{
+			var x = document.forms["reg"]["yourname"].value;
+			if (x == "")
+			{
+		       		alert("Enter Name!");
+				document.reg.yourname.focus();
+		       		return false;
+			}
+
+			var y = document.forms["reg"]["familyname"].value;
+			if (y == "")
+			{
+			        alert("Enter Family Name!");
+				document.reg.familyname.focus();
+			        return false;
+			}
+
+			var z = document.forms["reg"]["phoneno"].value;
+			if (z == "")
+			{
+			      alert("Enter Phone Number!");
+				document.reg.phoneno.focus();
+	  		      return false;
+			}
+
+			var a = document.forms["reg"]["email"].value;
+			var atpos = a.indexOf("@");
+			var dotpos = a.lastIndexOf(".");
+			if (atpos<1 || dotpos<atpos+2 || dotpos+2>=a.length)
+			{
+			        alert("Not a valid e-mail address");
+				document.reg.email.focus();
+			        return false;
+			}
+
+
+
+                      var ph=document.reg.phoneno.value;
+                      if(isNaN(ph)||ph.indexOf(" ")!=-1)
+			{
+            		 	alert("Enter numeric values!");
+				document.reg.phoneno.focus();
+				return false;
+			}
+			if(ph.length<10)
+			{
+				alert("Enter valid phone number!");
+				document.reg.phoneno.focus();
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+
+		}
+         </script>
+
+</div>
+
+      </body>
+</html>
